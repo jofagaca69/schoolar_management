@@ -24,4 +24,15 @@ class Student extends Model
             ->withPivot('relationship', 'is_primary_contact')
             ->withTimestamps();
     }
+
+    public function enrollments(): HasMany
+    {
+        return $this->hasMany(Enrollment::class);
+    }
+
+    // Este método es útil para mostrar el nombre completo en los selects
+    public function getFullNameAttribute(): string
+    {
+        return "{$this->first_name} {$this->last_name}";
+    }
 }

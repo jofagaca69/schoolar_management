@@ -18,8 +18,7 @@ return new class extends Migration
             $table->date('birth_date');
             $table->enum('dni_type', ['CC', 'CE', 'TI', 'RC']);
             $table->string('dni', 20);
-            $table->date('updated_at')->nullable();
-            $table->date('created_at')->nullable();
+            $table->timestamps();
 
             $table->primary(['id']);
         });

@@ -21,11 +21,10 @@ return new class extends Migration
             $table->string('address');
             $table->enum('dni_type', ['CC', 'CE', 'TI', 'RC']);
             $table->string('dni', 20)->unique('dni_unique');
-            $table->timestamps();
             $table->foreignId('dni_expedition_city')->constrained('cities')->onDelete('cascade');
             $table->foreignId('residence_city')->constrained('cities')->onDelete('cascade');
             $table->string('ocupation', 45)->nullable();
-
+            $table->timestamps();
             $table->primary(['id', 'dni_expedition_city', 'residence_city']);
         });
     }
