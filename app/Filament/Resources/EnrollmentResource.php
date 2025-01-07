@@ -14,6 +14,10 @@ use Filament\Tables\Table;
 class EnrollmentResource extends Resource
 {
     protected static ?string $model = Enrollment::class;
+    protected static ?string $navigationLabel = 'Matrículas';
+    protected static ?string $navigationGroup = 'Gestión académica';
+
+
 
     protected static ?string $navigationIcon = 'heroicon-o-academic-cap';
 

@@ -9,6 +9,8 @@ use Filament\Resources\Pages\ListRecords;
 class ListEnrollments extends ListRecords
 {
     protected static string $resource = EnrollmentResource::class;
+    protected static ?string $title = 'Matrículas';
+    protected static ?string $navigationLabel = 'Listar matrículas';
 
     protected function getHeaderActions(): array
     {
